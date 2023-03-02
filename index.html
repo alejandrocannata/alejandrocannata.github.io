@@ -12,11 +12,11 @@
     <!-- menus  -->
         <div class="contenedor-menu">
             <nav>
-                <h1>Mi Sitio Web</h1>
                 <ul class="menu">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#acerca-de-mi">Accerca de mi</a></li>
-                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#acerca-de-mi">Acerca de mi</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
                     <li><a href="#">Porfolio</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
@@ -29,21 +29,173 @@
     <header class="hero" id="inicio">
       <div class="hero-capa-encima">
       <div class="hero-cotenido">
-        <h1 class="hero-title">Soy Alejandro Cannata</h1>
+        <h1 class="hero-title">Alejandro Cannata</h1>
         <p class="hero-text">Diseñador Gráfico - Desarrollador Front-End</p>
         <a href="#acerca-de-mi" class="hero-btn">Acerca de mi</a>
       </div>
     </header>
   </div>
 
-  <div id="acerca-de-mi">
-      <div class="acerca">
-        <div class="foto"><img src="./img/24.jpg" alt=""></div>
-        <div>textos</div>
-      </div>
+  <!-- Seccion acerca de mi -->
 
+   <div class= "contenedor-acerca-de-mi" id="acerca-de-mi">
+
+       <div class="acerca">
+         <div class="contenedor-foto"><img class="mi-foto" src="./img/101125539.jfif" alt=""></div>
+         <div class="textos-perfil-foto">
+             <h5>Acerca de mi:</h1>
+             <h1>Dejame contarte sobre mi</h2>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Perspiciatis molestiae deleniti incidunt odio, rerum, nemo eaque harum,
+              quidem suscipit autem sequi modi veniam optio? Sequi, reiciendis dolores! Amet,
+              iusto blanditiis!</p>
+         </div>
+      </div>
+    </div>
+
+  <!-- Perfil -->
+
+  <div class="contenedor-perfil" id="perfil">
+
+    <div class="perfil-col1">
+
+      <h3 class="titulo-perfil">PERFIL</h3>
+      <p class="texto-perfil">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quia laboriosam vel pariatur quos minima expedita reprehenderit
+         iusto ea officia? Id quaerat fugit sunt vitae culpa dolorum, 
+         inventore accusantium minima facilis?.
+      </p>
+  
+      <ul class="info-lista-perfil">
+        <li>
+          <strong>Nombre:</strong>
+          <span>Alejandro Cannata</span>
+        </li>
+        <li>
+          <strong>Nacimiento:</strong>
+          <span>9 de Agosto, 1986</span>
+        </li>
+        <li>
+          <strong>Trabajos:</strong>
+          <span>Freelancer, Dessarrollador Front-End, Diseñador Gráfico</span>
+        </li>
+        <li>
+          <strong>Website:</strong>
+          <span>alejandrocannata.github.io</span>
+        </li>
+        <li>
+          <strong>Email:</strong>
+          <span>alejandrocannata@mail.com</span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="contenedor-habilidades" id="habilidades">
+      <h3>HABILIDADES</h3>
+      <ul class="info-lista-perfil">
+        <li>
+          <strong>HTML</strong>
+        </li>
+        <li>
+          <strong>CSS</strong>
+        </li>
+        <li>
+          <strong>JavaScript</strong>
+        </li>
+        <li>
+          <strong>C/C++/C#</strong>
+        </li>
+        <li>
+          <strong>Java</strong>
+        </li>
+        <li>
+          <strong>Python</strong>
+        </li>
+        <li>
+          <strong>PHP</strong>
+        </li>
+        <li>
+          <strong>MySQL</strong>
+        </li>
+      </ul>
+    </div>
   </div>
 
+  <div class="contenedor-botones">
+        <div>
+          <a href="#contacto">Contratame</a>
+        </div>
+        <div>
+          <a href="cv.pdf">Descargar CV</a>
+        </div>
+    </div>
+  </div>
+
+    <!-- Experiencia-->
+    <div class="contenedor-experiencia" id="experiencia">
+
+      <h1>experiencia</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Eius exercitationem inventore maxime natus, incidunt officia error? 
+        Sapiente rerum suscipit ea error nisi earum? Eos aliquam corporis 
+        porro expedita nam dolorem!
+      </p>
+
+      
+    </div>
+
+    <!-- Porfolio -->
+
+    <div class="contenedor-porfolio">
+
+      <h5>PORFOLIO:</h5>
+      <P>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Excepturi incidunt numquam possimus nisi repellendus laudantium eligendi aut,
+          modi, a consectetur in assumenda sunt commodi odio quos obcaecati tenetur. Sed, hic?
+      </P>
+    </div>
+
+    <div class="contenedor-contacto" id="contacto">
+      <div>
+        <h1>CONTACTAME</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+           Quasi minima recusandae possimus iusto, illum repudiandae blanditiis 
+           facilis delectus, nam nisi odit, sapiente ipsum laudantium. 
+           Obcaecati aliquam in aut quibusdam laboriosam!
+        </p>
+      </div>
+      <form action="">
+       
+        <div>
+          <input name="contactoNombre" type="text" id="contactNombre" placeholder="Nombre" value="" minlength="2" required="" aria-required="true">
+        </div>
+
+        <div>
+          <input name="contactoAsunto" type="text" id="contactoAsunto" placeholder="Asunto" value="">
+        </div>
+
+        <div>
+          <textarea name="contactoMsj" id="contactMsj" placeholder="Mensaje" rows="10" cols="50" required="" aria-required="true"></textarea>
+        </div>
+
+        <div>
+          <button class="submitform">Enviar</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <div>
+      <footer>
+        <p class="texto-footer">Copyrigth (c) Alejandro Cannata 2023 </p>
+      </footer>
+    </div>
     <!-- scripts con funcionalidades -->
     <script src="js/scripts.js"></script>
 </body>
