@@ -33,3 +33,50 @@ window.onscroll = function() {
 	document.documentElement.scrollTop = 0;
   };
   
+
+  /* galeria */
+
+  // No es necesario JavaScript para crear una galería básica, pero aquí tienes un ejemplo de cómo agregar una funcionalidad de Lightbox.
+
+const images = document.querySelectorAll('.gallery img');
+
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    const lightbox = document.createElement('div');
+    lightbox.classList.add('lightbox');
+    document.body.appendChild(lightbox);
+
+    const img = document.createElement('img');
+    img.src = image.src;
+    lightbox.appendChild(img);
+
+    lightbox.addEventListener('click', () => {
+      lightbox.remove();
+    });
+  });
+});
+
+/*
+	Galeria de imagenes
+
+*/
+var modalGaleria = document.getElementById("modal-galeria");
+            var btnCerrar = document.getElementsByClassName("btnCerrar")[0];
+            const imagenes = document.getElementsByClassName("img1");
+            var imagenModal = document.getElementById("imagenModal");
+            
+            /* bucle for para cada imagen con la class img1 */
+            for(let i=0; i< imagenes.length; i++){
+                imagenes[i].onclick = function(){ /*crea el evento para cada imagen del array*/
+                    modalGaleria.style.display = "block";
+                    imagenModal.src = imagenes[i].src; /* intercambio el src de las imagenes */
+                }
+            }
+
+            btnCerrar.onclick = function() { modalGaleria.style.display = "none"; } /* Cerrar la ventana modal */
+
+            window.onclick = function(event) { /* Cerrar la ventana si el click es afuera de la ventana modal*/
+                                            if (event.target == modalGaleria) {
+                                            modalGaleria.style.display = "none";
+                                             }
+            }
