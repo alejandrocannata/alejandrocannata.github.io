@@ -1,30 +1,64 @@
 /*
 Para: Proyecto final Desarrollo Front-End Ticmas
 Autor: Jorge Alejandro N. Cannata
+
 */
 
 /* Tipogrfias */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap');
 
+/*
+	Variables colores
+*/
+
+:root{
+	--fondo-menu: #151515;
+	--color-texto-menu: #fff;
+	--color-texto-hover-menu: #5c5ceb;
+	--fondo-footer: #151515;
+	--texto-footer: #757575;;
+	--fondo-gris-claro: #ebebeb;
+	--fondo-de-la-pagina: #fff;
+	--color-primario: #5c5ceb;
+	--color-secundario: #000;
+	--color-textos: #000;
+	--color-textos2: #7a7a7a;
+	--color-textos3: #ffffff;
+	--color-titulos-h1: #000;
+	--color-titulos-h2: #000;
+	--color-titulos-h5: #5c5ceb;
+}
+
+
+
+/*
+
+ Estilos generales
+ 
+ */
+
 /* estilos del cuerpo */
   body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
-    background-color: white;
-    color: black;
-}  
-
-
-/* Estilos generales */
+    background-color: var(--fondo-de-la-pagina);
+    color: var(--color-textos);
+}
 
 h5{
-color: 	#5c5ceb;
-text-align: center;
+	color: 	var(--color-titulos-h5);
+	text-align: center;
+	font-size: 1.5rem;
 
 }
+h1{
+	color: var(--color-titulos-h1);
+	font-size: 2rem;
+}
 h2{
+	color: var(--color-titulos-h2);
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -37,7 +71,7 @@ p{
 	margin-inline-end: 0px;
 	padding-left: 2rem;
 	padding-right: 2rem;
-
+	color: var(--color-textos);
 }
 
 li{
@@ -53,11 +87,14 @@ strong{
 span{
 	padding-top: 1rem;
 }
+
+
+
   /* Estilos para la barra de menú */
 
 .contenedor-menu {
-	background-color: #151515;
-	color: #fff;
+	background-color: var(--fondo-menu);
+	color: var(--color-texto-menu);
 	padding: 10px;
 	z-index: 2;
 }
@@ -94,7 +131,7 @@ nav ul.menu li a {
 /* Cambia el color al pasar el mouse por arriba*/
 nav ul.menu li a:hover {
 	text-decoration: underline;
-    color: #5c5ceb;
+    color: var(--color-texto-hover-menu);
 }
 
 .menu-toggle {
@@ -132,34 +169,35 @@ nav ul.menu li a:hover {
 
   .hero-cotenido{
 	  text-align: center;
-	  color: #fff;
+	  color: var(--color-textos3);
 	  z-index: 0;
   }
   .hero-title {
-	  font-size: 3rem;
-	margin-bottom: 1rem;
+		color: var(--color-textos3);
+	  	font-size: 3rem;
+		margin-bottom: 1rem;
 }
 
 .hero-text {
 	font-size: 1.5rem;
 	margin-bottom: 2rem;
-	color: #5c5ceb;
+	color: var(--color-primario);
 }
   
 .hero-btn {
 	display: inline-block;
 	padding: 1rem 2rem;
 	border-radius: 25px;
-	border-color: #5c5ceb;
-	border: 2px solid #5c5ceb;
+	border-color:var(--color-primario);
+	border: 2px solid var(--color-primario);
 	color: rgb(247, 247, 247);
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
   
 .hero-btn:hover {
-	background-color:#5c5ceb;
-	color: #fff;
+	background-color:var(--color-primario)ceb;
+	color: var(--color-textos3);
 }
 
 .redes-sociales {
@@ -191,9 +229,8 @@ nav ul.menu li a:hover {
     height: 22rem;
 	margin-top: 5rem;
 	margin-bottom: 5rem;
-	padding-top: 1rem;
-    background: #ffffff;
-	color: black;
+    background: var(--fondo-de-la-pagina);
+	color: var(--color-textos);
 	display: flex;
 }
 
@@ -204,30 +241,33 @@ nav ul.menu li a:hover {
 	height: 300px;
 	background-color: rgb(221, 221, 221);
 	border-radius: 10px;
-	display: flex;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 100%;
 	box-shadow:  0px 0px 1.9px rgba(0, 0, 0, 0.033),  0px 0px 15px rgba(0, 0, 0, 0.06);
 }
+
+.textos-perfil-foto{
+	padding-inline: 5rem;
+}
 .textos-perfil-foto h5{
-	font-size: 1rem;
-	color: #5c5ceb;
 	text-align: left;
+	margin-top: 3rem;
+	margin-bottom: .5rem;
+}
+.textos-perfil-foto h1{
+	margin: 0;
 }
 
 .contenedor-foto{
 	width: 30%;
-	display: flex;
-}
-
-.textos-perfil-foto{
-	
-	width: 70%;
-	
+	padding-top: 3rem;
+	padding-left: 2rem;
 }
 
 .mi-foto {
 	width: 200px;
 	clip-path: circle(50%);
-	overflow: hidden;
 	margin: auto;
 }
 
@@ -276,43 +316,38 @@ nav ul.menu li a:hover {
 }
 
 /* experiencia */
+
 .contenedor-experiencia{
-	background-color: #ebebeb;
+	background-color: var(--fondo-gris-claro);
 	height: 100%;
 	margin: 0;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-
+	display: flex;
+	flex-wrap: wrap;
 }
 
+.experiencia-intro{
+	width: 100%;
+	margin: auto;
+	align-content: center;
+}
 .experiencia-intro p{
+	display: flex;
 	text-align: center;
-	padding-inline: 30rem;
-
+	max-width: 50%;
+	padding-inline: 25%;
 }
 
 .info-lista-experiencia, .contenedor-educacion{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	width: 100%;
 }
 
-/* habilidades */
-.experiencia{
-	background-color: #5c5ceb;
-	height: 100%;
-}
-
-/* contacto */
-.contenedor-contacto{
-	margin: 0;
-	padding-top: 5rem;
-	background-color: #151515;
-	color: white;
-}
-.contacto-texto{
-padding-left: 35rem;
-padding-right: 35rem;
+.contenedor-educacion h2{
+	width: 100%;
 }
 
 /*
@@ -326,7 +361,8 @@ padding-right: 35rem;
     grid-template-rows: auto;
     justify-items: center;
     padding-inline: 15%;
-
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
         
 .galeria-de-img img{ /* formato de cada imagen */
@@ -407,15 +443,32 @@ padding-right: 35rem;
          
      }
      .galeria-de-img img{
-         width: 400px;
-         height: 400px;
+         width: 300px;
+         height: 300px;
      }
      .modal-galeria-contenido{
-         width: 50vh; /*cambia tamaño ventan modal en pantallas de telefono*/
+		height: 300px;
+         width: 340px; /*cambia tamaño ventan modal en pantallas de telefono*/
      }
  }
 
+
 /*sección datos de contacto */
+
+/* contacto contenedor de esta seccion */
+.contenedor-contacto{
+	margin: 0;
+	padding-top: 5rem;
+	background-color: var(--fondo-footer);
+	color: var(--color-textos3);
+}
+.contenedor-contacto p{
+	display: flex;
+	text-align: center;
+	max-width: 50%;
+	padding-inline: 25%;
+	color: var(--color-textos3);
+}
 
 .datos-de-contacto {
 	display: flex;
@@ -427,16 +480,20 @@ padding-right: 35rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-right: 20px;
   }
   
   .contacto i {
 	font-size: 50px;
-	color: #5c5ceb;
+	color: var(--color-primario);
 	margin-bottom: 10px;
+	align-self: center;
   }
   
+.contacto p{
+	min-width: 15rem;
+ 	justify-content: center;
 
+}
 .redes-sociales{
 	padding-top: 3rem;
 	padding-bottom: 3rem;
@@ -450,8 +507,8 @@ padding-right: 35rem;
 
 footer
 {
-	background-color: #151515;
-	color: rgb(117, 117, 117);
+	background-color: var(--fondo-footer);
+	color: var(--color-textos2);
 	height: 5rem;
 	font-size: 12px;
 }
@@ -461,36 +518,83 @@ footer
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	text-align: center;
+	color: var(--color-textos2);
 }
 
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
 	nav ul.menu {
 		display: none;
 		flex-direction: column;
 		align-items: center;
 		margin: 10px 0;
+		z-index: 3;
 	}
 	
 	nav ul.menu li {
 		margin: 10px 0;
+		z-index: 3;
 	}
 	
 	.menu-toggle {
 		display: block;
 		cursor: pointer;
 		font-size: 24px;
-		color: #fff;
+		color: var(--color-textos3);
+		z-index: 4;
 	}
-}
-@media only screen and (max-width: 768px){
-	.contenedor-cabecera{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        padding: 3rem;
-        gap: 7rem;
-    }
+
+	.contenedor-acerca-de-mi
+	{
+		display: inline;
+	}
+
+	.acerca{
+		display: flex;
+		flex-wrap: wrap;
+		height: 100vh;
+		width: auto;
+		padding-bottom: 2rem;
+		margin: 2rem;
+	}
+	.contenedor-foto{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		width: 100%;
+		}
+	.mi-foto{
+		align-self: auto;
+	}
+	.textos-perfil-foto{
+		display: inline;
+		padding: 0;
+		}
+	.textos-perfil-foto h5, h1{
+		width: 100%;
+		text-align: center !important;
+	}
+
+	.contenedor-perfil{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.perfil-col1{
+		width: 100%;
+	}
+
+	/*
+	seccion contactame
+	*/
+	.contenedor-contacto{
+		width: 100%;
+	}
+	.datos-de-contacto{
+
+		display: inline;
+		
+	}
 }
 
 /*
@@ -502,8 +606,8 @@ footer
 	bottom: 20px;
 	right: 20px;
 	display: none;
-	background-color: #5c5ceb;
-	color: #fff;
+	background-color: var(--color-primario);
+	color: var(--color-textos3);
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -520,7 +624,6 @@ footer
   #volver-arriba:active {
 	background-color: #8383fc;
   }
-  
 
   #volver-arriba img {
 		display: block;
